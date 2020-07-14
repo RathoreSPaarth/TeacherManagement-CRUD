@@ -1,0 +1,33 @@
+<div class="container">
+  <h1>Teacher form</h1>
+  <form id="teacher-form" method="POST" action="/add-teachers/{{searchid}}?_method=PUT">
+    <br />
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="firstName" placeholder="First Name" required />
+    <br />
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lastName" placeholder="Last Name" />
+    <br />
+    <label for="Teacher-age">Age:</label>
+    <input type="number" id="Teacher-age" name="age" placeholder="Age in years" min="26" required />
+    <br />
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter Teacher Email" required />
+    <br />
+    <input class="btn btn-primary" type="submit" value="Add Teacher" />
+  </form>
+</div>
+
+<script>
+  function validateForm() {
+    let fname = document.getElementById('fname')
+    if (fname.value == "") {
+      alert('First Name field cannot be empty')
+    }
+
+    let age = document.getElementById('Teacher-age')
+    if (age.value < 25) {
+      alert('Age must be greater than 25')
+    }
+  }
+</script>

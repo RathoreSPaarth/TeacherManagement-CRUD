@@ -1,0 +1,10 @@
+<div class="container">
+  <h1>Student form</h1>
+  <form id="student-form" action="/add-students/{{searchid}}?_method=PUT" method='POST'>
+    <input type="hidden" name="_method" value="PUT">
+    <label for="student-name">NAME:</label>
+    <input type="text" id="student-name" name="name" placeholder="Enter Student Name" required />
+    <br />
+    <input class="btn btn-primary" type="submit" value="Add Student" />
+  </form>
+</div>

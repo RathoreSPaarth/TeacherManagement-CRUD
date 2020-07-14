@@ -1,0 +1,31 @@
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Age</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <th scope="row">{{this.id}}</th>
+      <td><a href="/teachers/{{this.id}}/">{{this.firstName}}</a> </td>
+      <td>{{this.lastName}}</td>
+      <td>{{this.email}}</td>
+      <td>{{this.age}}</td>
+      <td><a href="/add-teachers/{{this.id}}">EDIT</a></td>
+      <td>
+        <form action="/teachers/{{this.id}}?_method=DELETE" method='POST'>
+          <input class="btn btn-danger" type="submit" value="Delete Teacher" />
+        </form>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+
+<a class="btn btn-primary btn-lg" href="/add-teachers" role="button">Add Teachers</a>
