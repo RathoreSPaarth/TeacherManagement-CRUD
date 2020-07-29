@@ -12,7 +12,7 @@
   <tbody>
     {{#each data}}
     <tr>
-      <th scope="row">{{this.id}}</th>
+      <th scope="row">{{@index}}</th>
       <td><a href="/teachers/{{this.id}}/">{{this.firstName}}</a> </td>
       <td>{{this.lastName}}</td>
       <td>{{this.email}}</td>
